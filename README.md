@@ -1,103 +1,125 @@
-# Sanity Newsletter App
+# 📨 **Sanity Newsletter App**
 
-A powerful, full-featured newsletter management application built with React and Sanity. This app provides a complete solution for managing newsletter subscriptions, creating and publishing posts, managing pages, and tracking analytics.
+A powerful, full-featured Newsletter Management Platform built with React, TypeScript, and Sanity CMS.
+This application provides an end-to-end solution for managing subscribers, publishing content, designing email templates, and tracking performance — all from a modern, highly customizable admin interface.
 
-![Sanity Newsletter App](https://img.shields.io/badge/Sanity-Newsletter%20App-ff6b6b?style=for-the-badge&logo=sanity)
-![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.1-3178c6?style=for-the-badge&logo=typescript)
+Built using the Sanity App SDK, enabling deep customization of the admin experience with custom tools, workflows, and interfaces.
 
-## Features
+![Sanity Newsletter App](https://img.shields.io/badge/Sanity-Newsletter%20App-ff6b6b?style=for-the-badge\&logo=sanity)
+![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge\&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.1-3178c6?style=for-the-badge\&logo=typescript)
 
-### Analytics Dashboard
-- Real-time visitor and member statistics
-- Post performance metrics (views, opens, clicks)
-- Growth tracking with interactive charts
-- Top performing content insights
+---
 
-### Post Management
-- Rich text editor with Portable Text support
-- Draft and publish workflow
-- Featured images with Sanity image optimization
-- Author and tag management
-- Excerpt and SEO metadata
+## 🚀 Features
 
-### Page Management
-- Create and manage static pages
-- Custom page layouts
-- Navigation editor integration
+### 📊 Analytics Dashboard
 
-### Member Management
-- Subscriber database with CRUD operations
-- Subscription status tracking (active, inactive, unsubscribed, bounced)
-- Member labels and categorization
-- Source tracking (website, email, social media)
-- Filter and search capabilities
+* Real-time visitor & subscriber statistics
+* Post performance metrics (views, opens, clicks)
+* Growth tracking with interactive charts
+* Top-performing content insights
 
-### Email Templates
-- Automated email template generation
-- Customizable header and footer
-- Latest posts integration
-- Responsive email design
+### 📝 Post Management
 
-### Settings
-- Site settings configuration
-- Email settings customization
-- Design editor for branding
-- Navigation management
+* Rich-text editor with **Portable Text**
+* Draft & publish workflow
+* Featured images with Sanity image optimization
+* Author & tag management
+* SEO metadata & excerpts
 
-## Prerequisites
+### 📄 Page Management
 
-Before you begin, ensure you have the following installed:
+* Create & manage static pages
+* Custom page layouts
+* Navigation editor integration
 
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- A [Sanity.io](https://www.sanity.io/) account
+### 👥 Member Management
 
-## Getting Started
+* Full subscriber database (CRUD)
+* Subscription lifecycle tracking
+* Labels & segmentation
+* Source tracking (web, email, social)
+* Advanced filtering & search
 
-### 1. Clone the Repository
+### ✉️ Email Templates
 
-\`\`\`bash
+* Automated email template generation
+* Custom header & footer controls
+* Latest posts auto-insertion
+* Fully responsive email layout
+
+### ⚙️ Settings
+
+* Site configuration
+* Email customization
+* Branding design editor
+* Navigation management
+
+---
+
+## 🧱 Tech Stack
+
+* **Frontend:** React 19, TypeScript 5.1
+* **CMS:** Sanity.io
+* **Email Engine:** Custom email rendering
+* **Deployment:** Vercel / Static Hosting
+
+---
+
+## 🧩 Prerequisites
+
+* Node.js **v18+**
+* npm or yarn
+* A **Sanity.io** account
+
+---
+
+## 🛠 Getting Started
+
+### 1️⃣ Clone Repository
+
+```bash
 git clone https://github.com/your-username/sanity-newsletter-app.git
 cd sanity-newsletter-app
-\`\`\`
+```
 
-### 2. Install Dependencies
+### 2️⃣ Install Dependencies
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
-### 3. Configure Sanity
+### 3️⃣ Configure Sanity
 
-Update the Sanity configuration in \`src/App.tsx\`:
+**`src/App.tsx`**
 
-\`\`\`typescript
+```ts
 const sanityConfigs: SanityConfig[] = [
   {
-    projectId: 'your-project-id',  // Replace with your Sanity project ID
-    dataset: 'production',          // Or your dataset name
+    projectId: 'your-project-id',
+    dataset: 'production',
     studioMode: {
       enabled: true,
     },
   }
 ]
-\`\`\`
+```
 
-Also update \`src/lib/sanity-client.ts\`:
+**`src/lib/sanity-client.ts`**
 
-\`\`\`typescript
-const projectId = 'your-project-id'  // Replace with your Sanity project ID
-const dataset = 'production'          // Or your dataset name
-const apiVersion = '2025-11-26'       // Use current date or your preferred version
-\`\`\`
+```ts
+const projectId = 'your-project-id'
+const dataset = 'production'
+const apiVersion = '2025-11-26'
+```
 
-### 4. Update CLI Configuration
+### 4️⃣ Update CLI Configuration
 
-Edit \`sanity.cli.ts\` with your organization and app details:
+**`sanity.cli.ts`**
 
-\`\`\`typescript
-import {defineCliConfig} from 'sanity/cli'
+```ts
+import { defineCliConfig } from 'sanity/cli'
 
 export default defineCliConfig({
   app: {
@@ -108,23 +130,27 @@ export default defineCliConfig({
     appId: 'your-app-id',
   },
 })
-\`\`\`
+```
 
-### 5. Start Development Server
+### 5️⃣ Start Development Server
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
-The app will be available at \`http://localhost:3333\` (or the port specified by Sanity CLI).
+App will run at:
 
-## Sanity Schema Requirements
+```
+http://localhost:3333
+```
 
-This app expects the following document types in your Sanity schema:
+---
 
-### post
+## 🧬 Sanity Schema Requirements
 
-\`\`\`javascript
+### 📰 **post**
+
+```js
 {
   name: 'post',
   type: 'document',
@@ -138,11 +164,11 @@ This app expects the following document types in your Sanity schema:
     { name: 'tag', type: 'array', of: [{ type: 'reference', to: [{ type: 'tag' }] }] },
   ]
 }
-\`\`\`
+```
 
-### member
+### 👤 **member**
 
-\`\`\`javascript
+```js
 {
   name: 'member',
   type: 'document',
@@ -156,11 +182,11 @@ This app expects the following document types in your Sanity schema:
     { name: 'labels', type: 'array', of: [{ type: 'reference', to: [{ type: 'label' }] }] },
   ]
 }
-\`\`\`
+```
 
-### author
+### 🧑 **author**
 
-\`\`\`javascript
+```js
 {
   name: 'author',
   type: 'document',
@@ -169,11 +195,11 @@ This app expects the following document types in your Sanity schema:
     { name: 'avatar', type: 'image' },
   ]
 }
-\`\`\`
+```
 
-### tag
+### 🏷 **tag**
 
-\`\`\`javascript
+```js
 {
   name: 'tag',
   type: 'document',
@@ -182,11 +208,11 @@ This app expects the following document types in your Sanity schema:
     { name: 'slug', type: 'slug' },
   ]
 }
-\`\`\`
+```
 
-### page
+### 📄 **page**
 
-\`\`\`javascript
+```js
 {
   name: 'page',
   type: 'document',
@@ -196,11 +222,11 @@ This app expects the following document types in your Sanity schema:
     { name: 'body', type: 'array', of: [{ type: 'block' }] },
   ]
 }
-\`\`\`
+```
 
-### siteSettings (singleton)
+### 🏗 **siteSettings** (Singleton)
 
-\`\`\`javascript
+```js
 {
   name: 'siteSettings',
   type: 'document',
@@ -210,11 +236,11 @@ This app expects the following document types in your Sanity schema:
     { name: 'logo', type: 'image' },
   ]
 }
-\`\`\`
+```
 
-### emailSettings (singleton)
+### ✉️ **emailSettings** (Singleton)
 
-\`\`\`javascript
+```js
 {
   name: 'emailSettings',
   type: 'document',
@@ -224,59 +250,98 @@ This app expects the following document types in your Sanity schema:
     { name: 'footer', type: 'object' },
   ]
 }
-\`\`\`
-
-## Available Scripts
-
-| Script | Description |
-|--------|-------------|
-| \`npm run dev\` | Start development server |
-| \`npm run build\` | Build for production (outputs to \`dist/\`) |
-| \`npm run start\` | Start production server |
-
-## Deployment
-
-### Vercel (Recommended)
-
-This project includes a \`vercel.json\` configuration for easy deployment:
-
-1. Connect your repository to Vercel
-2. Vercel will automatically detect the configuration
-3. Deploy!
-
-The configuration handles:
-- Build command: \`npm run build\`
-- Output directory: \`dist\`
-- SPA routing with rewrites
-
-### Manual Deployment
-
-\`\`\`bash
-npm run build
-\`\`\`
-
-The \`dist/\` folder contains your production-ready files. Deploy to any static hosting service.
-
-## Environment Variables
-
-For production deployments, you may need to set:
-
-| Variable | Description |
-|----------|-------------|
-| \`NEXT_PUBLIC_SITE_URL\` | Your site's public URL (for email templates) |
-| \`NEXT_PUBLIC_VERCEL_URL\` | Automatically set by Vercel |
-
-
-## Screenshots
-
-
-## Support
-
-For issues and questions:
-- Check the [Sanity documentation](https://www.sanity.io/docs)
-- Review the [Sanity SDK documentation](https://www.sanity.io/docs/sdk)
-- Open an issue in this repository
+```
 
 ---
 
-Built with [Sanity](https://www.sanity.io/) and [React](https://react.dev/)
+## 📜 Available Scripts
+
+| Script          | Description              |
+| --------------- | ------------------------ |
+| `npm run dev`   | Start development server |
+| `npm run build` | Build for production     |
+| `npm run start` | Start production server  |
+
+---
+
+## 🚢 Deployment
+
+### Vercel (Recommended)
+
+1. Connect repository to **Vercel**
+2. Vercel auto-detects configuration
+3. Deploy 🎉
+
+Includes:
+
+* Build command → `npm run build`
+* Output directory → `dist`
+* SPA routing via rewrites
+
+### Manual Deployment
+
+```bash
+npm run build
+```
+
+Deploy contents of **`dist/`** to any static hosting provider.
+
+---
+
+## 🌍 Environment Variables
+
+| Variable                 | Purpose                             |
+| ------------------------ | ----------------------------------- |
+| `NEXT_PUBLIC_SITE_URL`   | Public site URL for email templates |
+| `NEXT_PUBLIC_VERCEL_URL` | Provided automatically by Vercel    |
+
+---
+
+## 🧪 Screenshots
+
+Dashboard
+
+![Sanity Newsletter App](https://raw.githubusercontent.com/multidots/sanity-newsletter-appsdk/refs/heads/main/src/preview/dashboard.png)
+
+Post & Page Editor
+
+![Sanity Newsletter App - Post & Page Editor ](https://raw.githubusercontent.com/multidots/sanity-newsletter-appsdk/refs/heads/main/src/preview/editor.png)
+
+Post Preview ( Web + Email )
+
+![Sanity Newsletter App - Preview ](https://raw.githubusercontent.com/multidots/sanity-newsletter-appsdk/refs/heads/main/src/preview/preview.png)
+
+Publish Workflow ( Web + Email )
+
+![Sanity Newsletter App - Publish Workflow ](https://raw.githubusercontent.com/multidots/sanity-newsletter-appsdk/refs/heads/main/src/preview/publish-workflow.png)
+
+Setting - Design Customize
+
+![Sanity Newsletter App - Design Customize](https://raw.githubusercontent.com/multidots/sanity-newsletter-appsdk/refs/heads/main/src/preview/design-customize.png)
+
+Setting - Navigation
+
+![Sanity Newsletter App - Navigation](https://raw.githubusercontent.com/multidots/sanity-newsletter-appsdk/refs/heads/main/src/preview/navigation.png)
+
+Setting - Email Setting
+
+![Sanity Newsletter App -  Email Setting](https://raw.githubusercontent.com/multidots/sanity-newsletter-appsdk/refs/heads/main/src/preview/emailsetting.png)
+
+
+---
+
+## 🆘 Support
+
+* [Sanity Documentation](https://www.sanity.io/docs)
+* [Sanity SDK](https://www.sanity.io/docs/sdk)
+* Create an issue in this repository
+
+---
+
+## 🏁 Conclusion
+
+**Sanity Newsletter App** provides a production-ready content & newsletter platform built for scalability, speed, and editorial efficiency.
+
+> Built with ❤️ using **Sanity** and **React**
+
+---
