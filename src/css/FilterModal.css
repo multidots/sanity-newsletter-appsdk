@@ -1,0 +1,232 @@
+.filter-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.filter-modal {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.filter-modal-header {
+  padding: 24px;
+  border-bottom: 1px solid #e5eff5;
+}
+
+.filter-modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #15171a;
+}
+
+.filter-modal-content {
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.filter-empty-state {
+  padding: 20px;
+  text-align: center;
+  color: #738a94;
+  font-size: 14px;
+}
+
+.filter-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.filter-field-select,
+.filter-operator-select {
+  padding: 8px 12px;
+  border: 1px solid #e5eff5;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #15171a;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.filter-field-select:focus,
+.filter-operator-select:focus {
+  outline: none;
+  border-color: #15171a;
+}
+
+.filter-field-select {
+  min-width: 120px;
+}
+
+.filter-operator-select {
+  min-width: 100px;
+}
+
+.filter-value-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filter-value-input {
+  width: 100%;
+  padding: 8px 32px 8px 12px;
+  border: 1px solid #e5eff5;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #15171a;
+  background-color: #ffffff;
+  transition: border-color 0.15s ease;
+}
+
+.filter-value-input:focus {
+  outline: none;
+  border-color: #15171a;
+}
+
+.filter-value-select {
+  padding: 8px 12px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23738a94' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+
+.filter-value-date {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.filter-clear-button {
+  position: absolute;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #738a94;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.filter-clear-button:hover {
+  color: #15171a;
+}
+
+.filter-clear-button svg {
+  width: 14px;
+  height: 14px;
+}
+
+.filter-remove-button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #738a94;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.filter-remove-button:hover {
+  background-color: #f8f9fa;
+  color: #15171a;
+}
+
+.filter-remove-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.add-filter-button {
+  width: 100%;
+  padding: 10px;
+  border: 1px dashed #e5eff5;
+  border-radius: 4px;
+  background: none;
+  color: #15171a;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-top: 8px;
+}
+
+.add-filter-button:hover {
+  border-color: #15171a;
+  background-color: #f8f9fa;
+}
+
+.filter-modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #e5eff5;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.reset-filters-button {
+  padding: 10px 20px;
+  border: 1px solid #e5eff5;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #15171a;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.reset-filters-button:hover {
+  border-color: #15171a;
+  background-color: #f8f9fa;
+}
+
+.apply-filters-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #15171a;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.apply-filters-button:hover {
+  background-color: #2a2a2a;
+}
+

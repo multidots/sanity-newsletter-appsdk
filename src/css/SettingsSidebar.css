@@ -1,0 +1,140 @@
+.settings-sidebar {
+  width: 33.33%;
+  flex: 0 0 33.33%;
+  flex-basis: 33.33%;
+  height: 100vh;
+  background-color: #fafafb;
+  display: flex;
+  padding: 0 32px;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 200;
+}
+
+.settings-search {
+  padding: 40px 0px 20px 0px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  width: 240px;
+}
+
+.search-input-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  color: #738a94;
+  pointer-events: none;
+}
+
+.search-input {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .15s;
+  box-shadow:0 0 1px rgba(21, 23, 26, .25), 0 1px 3px rgba(0, 0, 0, .03), 0 8px 10px -12px rgba(0, 0, 0, .1); 
+  font-size: 14px;
+  padding: 6px 33px;
+  height: 40px;
+  background-color: rgb(255 255 255 );
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #15171a;
+}
+
+.search-input::placeholder {
+  color: #738a94;
+}
+
+.settings-nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 0;
+  width: 240px;
+  margin: 0 0 0 auto;
+}
+
+.settings-group {
+  margin-bottom: 24px;
+}
+
+.settings-group-title {
+  margin: 0 0 16px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #15171a;
+}
+
+.settings-nav-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #626d79;
+  font-size: 14px;
+  text-align: left;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .15s;
+  position: relative;
+  border-radius: 6px;
+  margin-top: 1px;
+}
+
+.settings-nav-item:hover {
+  background-color: #ebeef0;
+}
+
+.settings-nav-item.active {
+  background-color: #ebeef0;
+  color: #15171a;
+}
+
+.settings-nav-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-nav-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.settings-nav-label {
+  flex: 1;
+}
+
+.settings-no-results {
+  padding: 40px 20px;
+  text-align: center;
+  color: #738a94;
+}
+
+.settings-no-results p {
+  margin: 0;
+  font-size: 14px;
+}
+
