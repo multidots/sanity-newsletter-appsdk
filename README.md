@@ -80,7 +80,7 @@ Built using the Sanity App SDK, enabling deep customization of the admin experie
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/sanity-newsletter-app.git
+git clone https://github.com/multidots/sanity-newsletter-appsdk.git
 cd sanity-newsletter-app
 ```
 
